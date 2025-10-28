@@ -8,3 +8,432 @@ Template: twentytwentyfive
 Text Domain: twentytwentyfive-child
 */
 
+:root {
+    --devlog-radius-lg: 1.25rem;
+    --devlog-radius-md: 1rem;
+    --devlog-radius-sm: 0.65rem;
+    --devlog-shadow: 0 20px 45px -30px rgba(16, 19, 33, 0.45);
+    --devlog-border: 1px solid color-mix(in srgb, currentColor 8%, transparent);
+    --devlog-surface: rgba(255, 255, 255, 0.72);
+    --devlog-surface-strong: rgba(9, 12, 20, 0.8);
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --wp--preset--color--base: #090b13;
+    --wp--preset--color--contrast: #f7f9ff;
+    --wp--preset--color--accent-4: #9ba3c6;
+    --wp--preset--color--accent-6: color-mix(in srgb, var(--wp--preset--color--contrast) 15%, transparent);
+    --devlog-surface: rgba(16, 20, 34, 0.84);
+    --devlog-surface-strong: rgba(8, 10, 18, 0.95);
+}
+
+html[data-theme="light"] {
+    color-scheme: light;
+}
+
+body {
+    background: radial-gradient(120% 120% at 0% 0%, rgba(107, 99, 255, 0.08), transparent 65%),
+        radial-gradient(120% 120% at 100% 0%, rgba(255, 155, 86, 0.1), transparent 70%),
+        var(--wp--preset--color--base);
+}
+
+.devlog-header {
+    backdrop-filter: blur(16px);
+    background: color-mix(in srgb, var(--wp--preset--color--base) 78%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.devlog-site-title a {
+    font-family: var(--wp--preset--font-family--mono);
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+.devlog-theme-toggle {
+    position: relative;
+    width: 54px;
+    height: 28px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+    background: color-mix(in srgb, var(--wp--preset--color--base) 78%, transparent);
+    display: inline-flex;
+    align-items: center;
+    padding: 2px;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.devlog-theme-toggle__track {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(118, 71, 255, 0.28), rgba(255, 180, 96, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.devlog-theme-toggle__thumb {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: var(--wp--preset--color--contrast);
+    transform: translateX(0);
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 6px 16px rgba(17, 24, 39, 0.2);
+}
+
+.devlog-theme-toggle.is-dark .devlog-theme-toggle__thumb {
+    transform: translateX(26px);
+    background: linear-gradient(135deg, #7f5cff, #ffb973);
+}
+
+.devlog-theme-toggle.is-dark .devlog-theme-toggle__track {
+    opacity: 1;
+}
+
+.devlog-hero .highlight {
+    background: linear-gradient(120deg, rgba(127, 92, 255, 0.45), rgba(255, 185, 115, 0.45));
+    padding: 0.15em 0.35em;
+    border-radius: var(--devlog-radius-sm);
+    box-decoration-break: clone;
+}
+
+.wp-block-button.is-style-devlog-primary .wp-block-button__link {
+    background: linear-gradient(135deg, #7f5cff, #ffb973);
+    color: #080a12;
+    border-radius: 999px;
+    font-family: var(--wp--preset--font-family--mono);
+    font-weight: 600;
+    box-shadow: 0 14px 30px -18px rgba(127, 92, 255, 0.7);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.wp-block-button.is-style-devlog-primary .wp-block-button__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px -18px rgba(127, 92, 255, 0.8);
+}
+
+.wp-block-button.is-style-underline .wp-block-button__link {
+    background: transparent;
+    color: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 1px solid currentColor;
+    border-radius: 0;
+}
+
+.devlog-card,
+.devlog-project,
+.devlog-projects__grid > .wp-block-group,
+.devlog-about-page .wp-block-column > .devlog-contact,
+.devlog-toc {
+    backdrop-filter: blur(22px);
+    background: var(--devlog-surface);
+    border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+    box-shadow: var(--devlog-shadow);
+}
+
+.devlog-card__meta,
+.devlog-meta {
+    font-size: 0.85rem;
+    font-family: var(--wp--preset--font-family--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: color-mix(in srgb, currentColor 55%, transparent);
+}
+
+.devlog-card__tags,
+.devlog-tech .devlog-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+    font-family: var(--wp--preset--font-family--mono);
+}
+
+.devlog-card__tags a,
+.devlog-chip,
+.devlog-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, currentColor 8%, transparent);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.devlog-card__tags a:hover,
+.devlog-chip:hover {
+    background: color-mix(in srgb, currentColor 16%, transparent);
+    transform: translateY(-1px);
+}
+
+.devlog-badge {
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: linear-gradient(120deg, rgba(127, 92, 255, 0.24), rgba(255, 185, 115, 0.24));
+}
+
+.devlog-link a {
+    font-family: var(--wp--preset--font-family--mono);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+}
+
+.devlog-project__media img,
+.devlog-card__media img {
+    border-radius: var(--devlog-radius-md) var(--devlog-radius-md) 0 0;
+    object-fit: cover;
+}
+
+.devlog-project__links {
+    font-size: 0.95rem;
+}
+
+.devlog-projects__cta,
+.devlog-about,
+.devlog-related {
+    border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.devlog-card__thumb img {
+    border-radius: var(--devlog-radius-sm);
+    object-fit: cover;
+}
+
+.devlog-card__code {
+    border-radius: var(--devlog-radius-md);
+    overflow: hidden;
+}
+
+.devlog-card figure.wp-block-code,
+.devlog-card .wp-block-code {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.devlog-card figure.wp-block-code pre,
+.devlog-card .wp-block-code pre {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.devlog-card figure.wp-block-code code,
+.devlog-card .wp-block-code code {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+pre[class*="language-"],
+pre.wp-block-code {
+    position: relative;
+    border-radius: var(--devlog-radius-md);
+    background: var(--devlog-surface-strong);
+    border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+.devlog-copy-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    border: none;
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    font-family: var(--wp--preset--font-family--mono);
+    font-size: 0.75rem;
+    cursor: pointer;
+    background: color-mix(in srgb, var(--wp--preset--color--contrast) 85%, transparent);
+    color: var(--wp--preset--color--base);
+    box-shadow: 0 10px 20px -15px rgba(8, 10, 18, 0.8);
+    transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.devlog-copy-button:hover {
+    transform: translateY(-1px);
+}
+
+.devlog-copy-button.copied {
+    background: linear-gradient(120deg, #7f5cff, #ffb973);
+    color: #05060c;
+}
+
+.devlog-flag {
+    background: linear-gradient(120deg, rgba(255, 180, 96, 0.2), rgba(255, 120, 120, 0.2));
+    border-radius: 0.35rem;
+    padding: 0.1rem 0.35rem;
+}
+
+.devlog-flag--todo {
+    color: #ffb973;
+}
+
+.devlog-flag--fix {
+    color: #ff7070;
+}
+
+.devlog-toc {
+    border-radius: var(--devlog-radius-lg);
+    background: color-mix(in srgb, var(--wp--preset--color--base) 72%, transparent);
+}
+
+.devlog-toc__list ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 0.35rem;
+}
+
+.devlog-toc__list a {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.devlog-toc__list a:hover {
+    border-color: currentColor;
+}
+
+.devlog-pagination {
+    font-family: var(--wp--preset--font-family--mono);
+    gap: 0.5rem;
+}
+
+.devlog-pagination .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+    text-decoration: none;
+}
+
+.devlog-pagination .page-numbers.current,
+.devlog-pagination .page-numbers:hover {
+    background: linear-gradient(135deg, rgba(127, 92, 255, 0.8), rgba(255, 185, 115, 0.8));
+    color: #05060c;
+}
+
+.devlog-tag-cloud a {
+    text-decoration: none;
+    font-family: var(--wp--preset--font-family--mono);
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+    transition: background 0.2s ease;
+}
+
+.devlog-tag-cloud a:hover,
+.devlog-tag-cloud .tag-cloud-link:focus-visible {
+    background: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.devlog-about-page .devlog-avatar img {
+    border-radius: var(--devlog-radius-lg);
+    border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.devlog-contact {
+    padding: 1.5rem;
+    border-radius: var(--devlog-radius-lg);
+}
+
+.devlog-skills .devlog-chip,
+.devlog-tools .devlog-chip {
+    font-size: 0.9rem;
+}
+
+.devlog-social .wp-social-link {
+    border-radius: 999px;
+    background: color-mix(in srgb, currentColor 14%, transparent);
+    padding: 0.45rem;
+}
+
+.devlog-social .wp-social-link:hover {
+    background: color-mix(in srgb, currentColor 22%, transparent);
+}
+
+.devlog-back a {
+    text-decoration: none;
+    font-family: var(--wp--preset--font-family--mono);
+}
+
+.devlog-intro {
+    font-size: 1.1rem;
+    color: color-mix(in srgb, currentColor 45%, transparent);
+}
+
+.devlog-related__item {
+    border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+    padding-bottom: 1rem;
+}
+
+.devlog-related__item:last-child {
+    border-bottom: none;
+}
+
+.devlog-reading-time {
+    font-family: var(--wp--preset--font-family--mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, currentColor 45%, transparent);
+}
+
+.devlog-latest-posts .wp-block-post-template,
+.devlog-portfolio .wp-block-post-template {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 1.75rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 720px) {
+  .devlog-latest-posts .wp-block-post-template,
+  .devlog-portfolio .wp-block-post-template {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+    .devlog-theme-toggle {
+        margin-top: 1rem;
+    }
+
+    .devlog-card,
+    .devlog-project,
+    .devlog-card--blog {
+        box-shadow: none;
+    }
+
+    body {
+        background: var(--wp--preset--color--base);
+    }
+}
+
+.line-numbers {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-x: hidden !important;
+}
+
+.wp-block-group.is-layout-flex {
+  align-items: baseline;
+}

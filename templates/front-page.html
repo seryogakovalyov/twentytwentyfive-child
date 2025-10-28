@@ -1,0 +1,144 @@
+<!-- wp:template-part {"slug":"header","theme":"twentytwentyfive-child","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"devlog-front","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group devlog-front" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:group {"style":{"spacing":{"blockGap":"2.5rem"}},"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:group {"className":"devlog-hero","style":{"spacing":{"blockGap":"1.25rem"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"left","flexWrap":"nowrap"}} -->
+<div class="wp-block-group devlog-hero"><!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|mono","textTransform":"uppercase","letterSpacing":"0.2em"},"color":{"text":"var:preset|color|accent-4"}},"fontSize":"x-small"} -->
+<p class="has-text-color has-x-small-font-size" style="color:var(--wp--preset--color--accent-4);font-family:var(--wp--preset--font-family--mono);letter-spacing:0.2em;text-transform:uppercase">
+                DevLog &amp; Showcase</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.75rem,6vw,4.5rem)","fontFamily":"var:preset|font-family|mono"}}} -->
+<h1 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--mono);font-size:clamp(2.75rem,6vw,4.5rem)">Hi, I'm <span class="highlight">Sergey</span>. I develop digital products and platforms.</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.125rem"},"color":{"text":"var:preset|color|accent-4"}}} -->
+<p class="has-text-color" style="color:var(--wp--preset--color--accent-4);font-size:1.125rem">Full-stack developer focused on performance and Developer Experience. React, Node.js, WordPress, and Docker are my daily stack.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-group"><!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-devlog-primary"} -->
+<div class="wp-block-button is-style-devlog-primary"><a class="wp-block-button__link wp-element-button" href="/projects">View Projects</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline","style":{"border":{"radius":"999px"},"spacing":{"padding":{"left":"1.75rem","right":"1.75rem","top":"0.75rem","bottom":"0.75rem"}}}} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#about" style="border-radius:999px;padding-top:0.75rem;padding-right:1.75rem;padding-bottom:0.75rem;padding-left:1.75rem">About Me</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"devlog-latest-posts","style":{"spacing":{"blockGap":"1.5rem","padding":{"top":"var:preset|spacing|70"}}}} -->
+<div class="wp-block-group devlog-latest-posts" style="padding-top:var(--wp--preset--spacing--70)"><!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group"><!-- wp:heading {"fontSize":"x-large"} -->
+<h2 class="wp-block-heading has-x-large-font-size">Latest posts</h2>
+<!-- /wp:heading -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-underline"} -->
+<div class="wp-block-button is-style-underline"><a class="wp-block-button__link wp-element-button" href="/blog">All posts</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
+
+<!-- wp:query {"queryId":6,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date"},"className":"devlog-latest-posts__query"} -->
+<div class="wp-block-query devlog-latest-posts__query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"grid","columnCount":null,"minimumColumnWidth":"20rem"}} -->
+<!-- wp:group {"className":"devlog-card","style":{"spacing":{"blockGap":"0.75rem"},"border":{"radius":"1rem","width":"1px","color":"var:preset|color|accent-6"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}},"background":{"color":"var:preset|color|base"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group devlog-card has-border-color has-link-color" style="border-color:var(--wp--preset--color--accent-6);border-width:1px;border-radius:1rem"><!-- wp:post-featured-image {"isLink":true,"className":"devlog-card__media","style":{"border":{"radius":"0.85rem 0.85rem 0 0"}}} /-->
+
+<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem","padding":{"top":"1.25rem","right":"1.25rem","bottom":"1.25rem","left":"1.25rem"}}}} -->
+<div class="wp-block-group" style="padding-top:1.25rem;padding-right:1.25rem;padding-bottom:1.25rem;padding-left:1.25rem"><!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-group"><!-- wp:post-date {"className":"devlog-meta"} /-->
+
+<!-- wp:shortcode -->
+[reading_time]
+<!-- /wp:shortcode --></div>
+<!-- /wp:group -->
+
+<!-- wp:post-title {"level":3,"isLink":true,"style":{"typography":{"fontSize":"1.35rem"}},"fontFamily":"mono"} /-->
+
+<!-- wp:post-excerpt {"moreText":"Read more"} /-->
+
+<!-- wp:post-terms {"term":"post_tag","separator":"","className":"devlog-card__tags"} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>The publications will be available very soon.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"devlog-portfolio","style":{"spacing":{"padding":{"top":"var:preset|spacing|70"},"blockGap":"2rem"}}} -->
+<div class="wp-block-group devlog-portfolio" style="padding-top:var(--wp--preset--spacing--70)"><!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group"><!-- wp:heading {"fontSize":"x-large"} -->
+<h2 class="wp-block-heading has-x-large-font-size">Portfolio</h2>
+<!-- /wp:heading -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-underline"} -->
+<div class="wp-block-button is-style-underline"><a class="wp-block-button__link wp-element-button" href="/projects">All Projects</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
+
+<!-- wp:query {"queryId":6,"query":{"perPage":3,"pages":0,"offset":0,"postType":"portfolio","order":"desc","orderBy":"date","sticky":"","parents":[],"format":[]},"className":"devlog-latest-posts__query"} -->
+<div class="wp-block-query devlog-latest-posts__query"><!-- wp:post-template {"layout":{"type":"grid","columnCount":null,"minimumColumnWidth":"20rem"}} -->
+<!-- wp:group {"className":"devlog-card","style":{"spacing":{"blockGap":"0.75rem"},"border":{"radius":"1rem","width":"1px","color":"var:preset|color|accent-6"},"background":{"color":"var:preset|color|base"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group devlog-card has-border-color" style="border-color:var(--wp--preset--color--accent-6);border-width:1px;border-radius:1rem"><!-- wp:post-featured-image {"className":"devlog-card__media"} /-->
+
+<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem","padding":{"top":"1.25rem","bottom":"1.25rem","left":"1.5rem","right":"1.5rem"}}}} -->
+<div class="wp-block-group" style="padding-top:1.25rem;padding-right:1.5rem;padding-bottom:1.25rem;padding-left:1.5rem"><!-- wp:post-title {"level":3} /-->
+
+<!-- wp:post-excerpt {"moreText":""} /-->
+
+<!-- wp:group {"className":"devlog-project__meta","style":{"spacing":{"blockGap":"0.35rem"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-group devlog-project__meta"><!-- wp:post-terms {"term":"portfolio_tag"} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"devlog-project__links","style":{"spacing":{"blockGap":"1rem","margin":{"top":"1rem"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-group devlog-project__links" style="margin-top:1rem"><!-- wp:acf/portfolio-links {"name":"acf/portfolio-links","mode":"preview"} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>The publications will be available very soon.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query -->
+
+<!-- wp:group {"className":"devlog-about","style":{"spacing":{"padding":{"top":"var:preset|spacing|70"},"blockGap":"1.5rem"}}} -->
+<div id="about" class="wp-block-group devlog-about" style="padding-top:var(--wp--preset--spacing--70)"><!-- wp:heading {"fontSize":"x-large"} -->
+<h2 class="wp-block-heading has-x-large-font-size">About Me</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I have been building products for 10 years: from MVP to complex ecosystems. I launch teams, build processes, write clean code, and share my experience on my blog.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-group"><!-- wp:social-links {"iconColor":"contrast","iconColorValue":"var:preset|color|contrast","size":"has-normal-icon-size","className":"is-style-logos-only devlog-social"} -->
+<ul class="wp-block-social-links has-normal-icon-size has-icon-color is-style-logos-only devlog-social"><!-- wp:social-link {"url":"https://github.com","service":"github"} /-->
+
+<!-- wp:social-link {"url":"https://linkedin.com","service":"linkedin"} /-->
+
+<!-- wp:social-link {"url":"https://twitter.com","service":"x"} /-->
+
+<!-- wp:social-link {"url":"/feed","service":"rss"} /--></ul>
+<!-- /wp:social-links --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"twentytwentyfive-child","tagName":"footer"} /-->
