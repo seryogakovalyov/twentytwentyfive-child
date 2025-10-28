@@ -1,0 +1,35 @@
+<!-- wp:group {"className":"devlog-footer-newsletter","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|50","right":"var:preset|spacing|50"},"blockGap":"1.5rem"},"border":{"top":{"color":"var:preset|color|accent-6","width":"1px"}},"background":{"color":"var:preset|color|accent-5"}}} -->
+<div class="wp-block-group devlog-footer-newsletter" style="border-top-color:var(--wp--preset--color--accent-6);border-top-width:1px;background-color:var(--wp--preset--color--accent-5);padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--50)">
+    <!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem"}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group">
+        <!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.2em","fontFamily":"var:preset|font-family|mono"}},"fontSize":"x-small","textColor":"accent-4"} -->
+        <p class="has-accent-4-color has-text-color has-x-small-font-size" style="font-family:var(--wp--preset--font-family--mono);letter-spacing:0.2em;text-transform:uppercase">Stay in the loop</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"style":{"typography":{"fontSize":"clamp(2rem,5vw,3rem)","lineHeight":"1.1"}}} -->
+        <h2 class="wp-block-heading" style="font-size:clamp(2rem,5vw,3rem);line-height:1.1">Monthly digest with product updates, articles, and resources.</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"textColor":"accent-4"} -->
+        <p class="has-accent-4-color has-text-color">Join 1,000+ developers exploring better tooling and processes.</p>
+        <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+    <div class="wp-block-group">
+        <!-- wp:html -->
+        <form class="devlog-newsletter" action="#" method="post">
+            <label class="screen-reader-text" for="devlog-newsletter-email">Email</label>
+            <input id="devlog-newsletter-email" type="email" name="email" placeholder="name@example.com" required />
+            <button type="submit">Subscribe</button>
+        </form>
+        <!-- /wp:html -->
+
+        <!-- wp:paragraph {"style":{"color":{"text":"color-mix(in srgb, var(--wp--preset--color--contrast) 60%, transparent)"},"typography":{"fontSize":"0.85rem"}}} -->
+        <p class="has-text-color" style="color:color-mix(in srgb, var(--wp--preset--color--contrast) 60%, transparent);font-size:0.85rem">No spam — unsubscribe anytime.</p>
+        <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+</div>
+<!-- /wp:group -->
