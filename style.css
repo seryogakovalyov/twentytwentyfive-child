@@ -102,7 +102,7 @@ body {
     box-decoration-break: clone;
 }
 
-.wp-block-button.is-style-devlog-primary .wp-block-button__link {
+.wp-block-button.is-style-devlog-primary .wp-block-button__link, .comment-form .wp-block-button__link  {
     background: linear-gradient(135deg, #7f5cff, #ffb973);
     color: #080a12;
     border-radius: 999px;
@@ -112,7 +112,7 @@ body {
     transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.wp-block-button.is-style-devlog-primary .wp-block-button__link:hover {
+.wp-block-button.is-style-devlog-primary .wp-block-button__link:hover,  .comment-form .wp-block-button__link:hover {
     transform: translateY(-2px);
     box-shadow: 0 18px 40px -18px rgba(127, 92, 255, 0.8);
 }

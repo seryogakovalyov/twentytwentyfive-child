@@ -1,11 +1,14 @@
 <!-- wp:template-part {"slug":"header","theme":"twentytwentyfive-child","tagName":"header"} /-->
 
 <!-- wp:group {"tagName":"main","className":"devlog-404","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group devlog-404" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+<main class="wp-block-group devlog-404"
+    style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
     <!-- wp:group {"style":{"spacing":{"blockGap":"1.75rem"},"typography":{"textAlign":"center"}},"layout":{"type":"constrained","justifyContent":"center"}} -->
-    <div class="wp-block-group" style="text-align:center">
-        <!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|mono","textTransform":"uppercase","letterSpacing":"0.2em"}},"fontSize":"x-small","textColor":"accent-4"} -->
-        <p class="has-accent-4-color has-text-color has-x-small-font-size" style="font-family:var(--wp--preset--font-family--mono);letter-spacing:0.2em;text-transform:uppercase">Oops!</p>
+    <div class="wp-block-group">
+        <!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|mono","textTransform":"uppercase","letterSpacing":"0.2em"}},"textColor":"accent-4","fontSize":"x-small"} -->
+        <p class="has-accent-4-color has-text-color has-x-small-font-size"
+            style="font-family:var(--wp--preset--font-family--mono);letter-spacing:0.2em;text-transform:uppercase">Oops!
+        </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:heading {"style":{"typography":{"fontSize":"clamp(3.5rem,9vw,6rem)"}}} -->
@@ -13,17 +16,19 @@
         <!-- /wp:heading -->
 
         <!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|accent-4"}},"fontSize":"medium"} -->
-        <p class="has-text-color has-medium-font-size" style="color:var(--wp--preset--color--accent-4)">The page you are looking for has moved or no longer exists. Let’s get you back on track.</p>
+        <p class="has-text-color has-medium-font-size" style="color:var(--wp--preset--color--accent-4)">The page you are
+            looking for has moved or no longer exists. Let’s get you back on track.</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-        <div class="wp-block-buttons">
-            <!-- wp:button {"className":"is-style-devlog-primary"} -->
-            <div class="wp-block-button is-style-devlog-primary"><a class="wp-block-button__link wp-element-button" href="/">Go home</a></div>
+        <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-devlog-primary"} -->
+            <div class="wp-block-button is-style-devlog-primary"><a class="wp-block-button__link wp-element-button"
+                    href="/">Go home</a></div>
             <!-- /wp:button -->
 
             <!-- wp:button {"className":"is-style-outline","style":{"border":{"radius":"999px"}}} -->
-            <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/search" style="border-radius:999px">Search site</a></div>
+            <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button"
+                    href="/search" style="border-radius:999px">Search site</a></div>
             <!-- /wp:button -->
         </div>
         <!-- /wp:buttons -->
